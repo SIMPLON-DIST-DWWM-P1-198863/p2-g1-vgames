@@ -1,0 +1,28 @@
+.organization {
+  background-color: var(--lightgrey-background-color);
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border: 0.1rem solid var(--dark-background-color);
+  border-radius: 10%;
+  position: relative;
+}
+
+.displayGame {
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
+  border: 0.1rem solid var(--dark-background-color);
+  border-radius: 10%;
+}
+
+.displayGameTitle {
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-size-normal-bold);
+  color: var(--font-color-for-light-background);
+  text-align: center;
+}
