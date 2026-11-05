@@ -19,7 +19,7 @@ export type Game = {
 function App() {
   //API section:
   const [games, setGames] = useState<Game[]>([]); //equivalent to myGames, updateMyGames
-  const nb_max = 6; //limit the number of displayed games
+  const nb_max = 8; //limit the number of displayed games
 
   useEffect(() => {
     const getGame = async () => {
@@ -27,9 +27,7 @@ function App() {
         "https://materiel-apprentissage.github.io/api/video-games.json",
       );
       const data = await response.json();
-      const short_data = data
-        .filter((game: Game) => game.id !== 4) //remove id:4 correspond to Super Mario Odyssey
-        .slice(0, nb_max);
+      const short_data = data.slice(0, nb_max); //select from index 0 to index
       setGames(short_data); //update all nb_max games to games
     };
     getGame();

@@ -18,9 +18,9 @@
 
   /* Fontsizes */
   --font-size-normal: 1rem;
-  --font-size-normal-bold: 2rem;
-  --font-size-title-h1: 5rem;
-  --font-size-title-h2: 4rem;
+  --font-size-normal-bold: 1.1rem;
+  --font-size-title-h1: 3rem;
+  --font-size-title-h2: 2rem;
 
   /* Colors */
   --font-color-for-dark-background: #ffffff;

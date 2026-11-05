@@ -18,11 +18,18 @@
   margin: 1rem;
   border: 0.1rem solid var(--dark-background-color);
   border-radius: 10%;
+  cursor: pointer;
+}
+
+.displayGame:hover {
+  box-shadow: 0 0 1rem 0.1rem var(--dark-background-color);
+  /* no mvt left/right, no mvt up/down, blur radius, spread radius, color */
+  transform: translateY(-0.1rem);
 }
 
 .displayGameTitle {
-  font-size: var(--font-size-normal);
-  font-weight: var(--font-size-normal-bold);
+  font-size: var(--font-size-normal-bold);
+  font-weight: var(--font-size-normal);
   color: var(--font-color-for-light-background);
   text-align: center;
 }

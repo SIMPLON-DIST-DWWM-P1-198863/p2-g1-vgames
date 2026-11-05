@@ -17,7 +17,7 @@ function GameThumb({ sampleGame }: GameThumbProps) {
         src={sampleGame.image}
         alt={`${sampleGame.title}.png`}
         onError={(evt) => {
-          evt.currentTarget.src = "/missingImg.jpg";
+          evt.currentTarget.src = "/missingImg.png"; //if img not avalaible, use this instead
         }}
       />
       <figcaption>

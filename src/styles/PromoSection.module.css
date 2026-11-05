@@ -28,10 +28,20 @@
   gap: 2rem;
 }
 
-.price {
+.price_bloc {
   font-size: var(--font-size-normal);
   color: var(--font-color-for-dark-background);
   display: flex;
   justify-content: center;
   padding: 0.5rem;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  color: var(--orange-background-color);
+  text-shadow: 0rem 0rem 1rem var(--orange-background-color);
+  /* no mvt left/right, no mvt up/down, blur radius, color */
 }
