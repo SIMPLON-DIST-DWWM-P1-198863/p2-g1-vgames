@@ -1,6 +1,6 @@
-import './reset.css'
 import './App.css'
-import Header from './components/header.tsx'
+import './reset.css'
+import Header from './components/header/header'
 
 function App() {
   return (
