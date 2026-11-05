@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PromoSection from "./components/PromoSection.tsx";
 import Footer from "./components/footer/Footer.tsx";
+import Formulaire from "./components/Formulaire.tsx";
 
 export type Game = {
   id: number;
@@ -37,6 +38,7 @@ function App() {
   return (
     <div>
       <PromoSection containerGames={games} />
+      <Formulaire />
       <Footer />
     </div>
   );

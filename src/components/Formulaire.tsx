@@ -1,6 +1,7 @@
 import { useState } from "react";
-import './css/formulaire.css'
-export default function MonFormulaire() {
+import "../styles/formulaire.css";
+
+export default function Formulaire() {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
 

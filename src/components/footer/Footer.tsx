@@ -1,10 +1,6 @@
 import Reseaux from "./Reseaux-sociaux";
-import '../styles/footer.css';
+import "../../styles/footer.css";
 
 export default function Footer() {
-  return <>
-    {<Reseaux />}
-  </>;
+  return <>{<Reseaux />}</>;
 }
-
-
