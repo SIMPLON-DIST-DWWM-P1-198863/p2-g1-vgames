@@ -1,0 +1,8 @@
+.icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+
+  color: var(--orange-background-color);
+  border-radius: 50%;
+}
