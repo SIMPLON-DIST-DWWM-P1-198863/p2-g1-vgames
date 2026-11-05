@@ -1,7 +1,7 @@
-import './header.css'
-import logo from '../../assets/logo.png'
-import avatar from '../../assets/avatar.png'
 import '@fontsource/jost/400.css'
+import '../../styles/header.css'
+import logo from '../../assets/Oie.png'
+import avatar from '../../assets/avatar.png'
 
 function Header() {
   return (
