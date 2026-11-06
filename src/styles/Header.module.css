@@ -1,6 +1,6 @@
 header {
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-normal);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -8,8 +8,8 @@ header {
   gap: 0.5rem;
   margin: 0;
   padding: 0.75rem 1rem;
-  background-color: #1e1e1e;
-  border-bottom: 0.3rem solid #f39939;
+  background-color: var(--font-color-for-light-background);
+  border-bottom: 0.3rem solid var(--orange-background-color);
 }
 
 header > a,
@@ -32,22 +32,23 @@ header h1 {
 
 header h1 a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1.4rem;
+  color: var(--font-color-for-dark-background);
+  font-size: var(--font-size-normal-bigger);
 }
 
 header div > a > img {
   width: 3.5rem;
   height: 3.5rem;
-  border: 0.2rem solid #f39939;
+  border: 0.2rem solid var(--orange-background-color);
   border-radius: 50%;
 }
 
 .header-connexion {
   margin-top: 0.25rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #f39939;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--orange-background-color);
   text-decoration: none;
 }
 
@@ -71,7 +72,7 @@ header div > a > img {
   display: block;
   width: 1.8rem;
   height: 0.25rem;
-  background-color: #f39939;
+  background-color: var(--orange-background-color);
   border-radius: 0.15rem;
 }
 
@@ -88,15 +89,15 @@ header:has(input:checked) .header-menu {
 .header-btn {
   display: block;
   padding: 1rem 0;
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: var(--font-color-for-dark-background);
+  font-size: var(--font-weight-normal-bold);
   text-decoration: none;
-  border-top: 0.15rem solid #f39939;
+  border-top: 0.15rem solid var(--orange-background-color);
   transition: color 0.2s ease;
 }
 
 .header-btn:hover {
-  color: #f39939;
+  color: var(--orange-background-color);
 }
 
 @media (min-width: 768px) {
@@ -124,7 +125,7 @@ header:has(input:checked) .header-menu {
   }
 
   header h1 a {
-    font-size: 3.5rem;
+    font-size: var(--font-size-title-h1);
   }
 
   header div > a > img {
@@ -134,7 +135,7 @@ header:has(input:checked) .header-menu {
 
   .header-connexion {
     margin-top: 0.5rem;
-    font-size: 1.4rem;
+    font-size: var(--font-size-normal-bigger);
   }
 
   .header-burger {
@@ -153,11 +154,11 @@ header:has(input:checked) .header-menu {
   .header-btn {
     margin: 0.5rem 0;
     padding: 0.25rem 4rem;
-    font-size: 1.4rem;
+    font-size: var(--font-size-normal-bigger);
     border-top: none;
   }
 
   .header-btn + .header-btn {
-    border-left: 0.3rem solid #f39939;
+    border-left: 0.3rem solid var(--orange-background-color);
   }
 }
