@@ -1,75 +1,32 @@
-# React + TypeScript + Vite
+# Header US-01 :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Composant "Header" du site de jeux vidéo The Honk Zone, réalisé pour l'US01 en React et TypeScript.
+Il affiche le logo, le titre, l'avatar avec le lien de connexion, et le menu de navigation.
 
-Currently, two official plugins are available:
+# Contenu de la branche :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. "header.tsx" : le composant "Header", avec le logo et le titre cliquables, l'avatar avec Connexion en dessous, et le menu de navigation (accueil, catalogue de jeux, sorties à venir).
+2. "header.css" : le style en mobile first, mais également adapté pour la version desktop.
+3. Version mobile : un menu burger qui s'ouvre et se ferme avec une case à cocher cachée et du CSS
+4. Version desktop : le burger disparaît et les liens s'affichent en ligne
 
-## React Compiler
+# Technologies utilisées :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- CSS
 
-## Expanding the ESLint configuration
+Auteur : Théo Sabban
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Quick Explanation (Work in Progress):
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Initially, this section was intended to cover a single user story (US). However, after discussing it with our teacher, we realized that it actually encompasses two separate user stories.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+We therefore decided to split the work on this branch into two main parts, each corresponding to a separate pull request (PR):
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. API Integration: Fetching and managing video game data from the API.
 
-```
+2. Promotional Section: Displaying game thumbnails (GameThumb) and implementing a game pop-in (GamePopIn) to display additional game information (work in progress).
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+The Promotional Section is being developed with responsive design in mind, along with consistent and visually appealing CSS styling (work in progress).

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Argentina";
+  src: url("../assets/fonts/Argentina.ttf") format("truetype");
+  /* .ttf means truetype */
+}
+
+:root {
+  /* Fontfamilies */
+  --font-main: "Jost", sans-serif;
+  --font-secondary: "Argentina", serif;
+
+  /* Fontweights */
+  --font-weight-normal: 400;
+  --font-weight-title-h1: 900;
+  --font-weight-title-h2: 800;
+
+  /* Fontsizes */
+  --font-size-normal: 1rem;
+  --font-size-normal-bold: 1.1rem;
+  --font-size-title-h1: 3rem;
+  --font-size-title-h2: 2rem;
+
+  /* Colors */
+  --font-color-for-dark-background: #ffffff;
+  --font-color-for-light-background: #1e1e1e;
+
+  --grey-background-color: #9db5c0;
+  --lightgrey-background-color: #eaeaea;
+  --light-background-color: #ffffff;
+  --dark-background-color: #1e1e1e;
+  --orange-background-color: #fca616;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--grey-background-color);
+}

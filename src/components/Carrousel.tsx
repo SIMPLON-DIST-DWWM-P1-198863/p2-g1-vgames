@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css/bundle";
-import styles from "../App.module.css";
+import styles from "../Carrousel.module.css";
 
 function Carrousel() {
   return (

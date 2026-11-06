@@ -1,0 +1,7 @@
+.slide {
+  border: 2px dotted green;
+  aspect-ratio: 16 / 9;
+}
+.swiper {
+  width: 15rem;
+}
