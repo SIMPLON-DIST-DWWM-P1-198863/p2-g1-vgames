@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import PromoSection from "./components/PromoSection.tsx";
+import Footer from "./components/Footer.tsx";
+import Formulaire from "./components/Formulaire.tsx";
+import Header from "./components/Header.tsx";
 
 export type Game = {
   id: number;
@@ -27,7 +30,7 @@ function App() {
         "https://materiel-apprentissage.github.io/api/video-games.json",
       );
       const data = await response.json();
-      const short_data = data.slice(0, nb_max); //select from index 0 to index
+      const short_data = data.slice(0, nb_max); //select from index 0 to index nb_max
       setGames(short_data); //update all nb_max games to games
     };
     getGame();
@@ -35,7 +38,10 @@ function App() {
 
   return (
     <div>
+      <Header />
       <PromoSection containerGames={games} />
+      <Formulaire />
+      <Footer />
     </div>
   );
 }
