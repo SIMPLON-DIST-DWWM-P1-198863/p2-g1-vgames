@@ -1,4 +1,4 @@
-import "@fontsource/jost/400.css";
+// import "@fontsource/jost/400.css";
 import logo from "../assets/Oie.png";
 import avatar from "../assets/avatar.png";
 import styles from "../styles/Header.module.css";

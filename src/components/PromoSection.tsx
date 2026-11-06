@@ -10,7 +10,13 @@ function PromoSection({ containerGames }: PromoSectionProps) {
   const discount = 0.7; //%tage discount
   return (
     <div className={styles.promo_bloc}>
-      <h2>Les bons plans : - {Math.floor((1 - discount) * 100)} %</h2>
+      <h2>
+        Les bons plans
+        <span className={styles.discountTitle}>
+          {" : -"}
+          {Math.floor((1 - discount) * 100)} %
+        </span>
+      </h2>
 
       <div className={styles.games_bloc}>
         {containerGames.map((game) => (
