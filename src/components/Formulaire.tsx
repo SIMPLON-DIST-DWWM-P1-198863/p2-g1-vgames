@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/formulaire.css";
+import styles from "../styles/Formulaire.module.css";
 
 export default function Formulaire() {
   const [message, setMessage] = useState("");
@@ -11,9 +11,9 @@ export default function Formulaire() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="formulaire">
+    <form onSubmit={handleSubmit} className={styles.formulaire}>
       <h1>Nous contacter:</h1>
-      <div className="contact">
+      <div className={styles.contact}>
         <label htmlFor="email">Adresse email :</label>
         <input
           type="email"
@@ -22,7 +22,7 @@ export default function Formulaire() {
           onChange={(event) => setEmail(event.target.value)}
         />
       </div>
-      <div className="mess">
+      <div className={styles.mess}>
         <label htmlFor="message">Message :</label>
         <input
           type="text"
