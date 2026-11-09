@@ -2,7 +2,7 @@
   background-color: var(--dark-background-color);
   margin: 2rem;
   padding: 2rem;
-  border-radius: 2%;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +19,10 @@
   border-radius: 2rem;
   background-color: var(--orange-background-color);
   text-align: center;
+}
+
+.discountTitle {
+  font-family: var(--font-main); /* Jost */
 }
 
 .games_bloc {

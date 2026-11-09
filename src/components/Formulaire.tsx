@@ -12,9 +12,9 @@ export default function Formulaire() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.formulaire}>
-      <h1>Nous contacter:</h1>
+      <h3>Nous contacter :</h3>
       <div className={styles.contact}>
-        <label htmlFor="email">Adresse email :</label>
+        <label htmlFor="email">Adresse e-mail :</label>
         <input
           type="email"
           id="email"
