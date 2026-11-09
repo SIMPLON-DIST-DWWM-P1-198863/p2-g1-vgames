@@ -1,11 +1,19 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css/bundle";
-import styles from "../Carrousel.module.css";
+import styles from "../styles/Carrousel.module.css";
+import type { Game } from "../App.tsx";
 
-function Carrousel() {
+interface CarrouselProps {
+  containerGames: Game[];
+  nb_max: number; //limit the number of displayed games
+}
+
+function Carrousel({ containerGames, nb_max }: CarrouselProps) {
+  const new_containerGames = containerGames.slice(0, nb_max); //select from index 0 to index nb_max
+
   return (
-    <>
+    <div>
       <Swiper
         className={styles.swiper}
         // install Swiper modules
@@ -19,13 +27,22 @@ function Carrousel() {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide className={styles.slide}>Slide 1</SwiperSlide>
-        <SwiperSlide className={styles.slide}>Slide 2</SwiperSlide>
-        <SwiperSlide className={styles.slide}>Slide 3</SwiperSlide>
-        <SwiperSlide className={styles.slide}>Slide 4</SwiperSlide>
-        <SwiperSlide className={styles.slide}>Slide 5</SwiperSlide>
+        {new_containerGames.map((game) => (
+          <div>
+            <SwiperSlide className={styles.slide}>
+              <img
+                className={styles.swiper}
+                src={game.image}
+                alt={`${game.title}.png`}
+                onError={(evt) => {
+                  evt.currentTarget.src = "/missingImg.png"; //if img not avalaible, use this instead
+                }}
+              />
+            </SwiperSlide>
+          </div>
+        ))}
       </Swiper>
-    </>
+    </div>
   );
 }
 

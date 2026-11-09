@@ -23,7 +23,6 @@ export type Game = {
 function App() {
   //API section:
   const [games, setGames] = useState<Game[]>([]); //equivalent to myGames, updateMyGames
-  const nb_max = 8; //limit the number of displayed games
 
   useEffect(() => {
     const getGame = async () => {
@@ -31,8 +30,7 @@ function App() {
         "https://materiel-apprentissage.github.io/api/video-games.json",
       );
       const data = await response.json();
-      const short_data = data.slice(0, nb_max); //select from index 0 to index nb_max
-      setGames(short_data); //update all nb_max games to games
+      setGames(data); //update all nb_max games to games
     };
     getGame();
   }, []);
@@ -40,9 +38,9 @@ function App() {
   return (
     <div>
       <Header />
-      <PromoSection containerGames={games} />
+      <Carrousel containerGames={games} nb_max={5} />
+      <PromoSection containerGames={games} nb_max={8} />
       <Formulaire />
-      <Carrousel />
       <Footer />
     </div>
   );
