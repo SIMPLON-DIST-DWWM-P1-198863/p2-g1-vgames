@@ -11,7 +11,7 @@ export default function Footer() {
       <img src={Oie} alt="Oie" className={styles["logo-oie"]} />
       <h1 className={styles.mentions}>Mentions légales</h1>
       <div className={styles.suivre}>
-        <h2 className={styles["suivre-titre"]}>Nous suivre:</h2>
+        <h2 className={styles["suivre-titre"]}>Nous suivre :</h2>
         <div className={styles["suivre-logos"]}>
           <a href="https://www.instagram.com/">
             <img src={logoinstagram} alt="logo-instagram" />
