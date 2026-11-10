@@ -8,7 +8,7 @@ interface PopInProps {
 }
 
 function GamePopIn({ sampleGame, closePopIn, isOpen }: PopInProps) {
-  if (!isOpen || !sampleGame) return null;
+  if (!isOpen || !sampleGame) return null; //if pop in closed or no target game, show me nothing;
   return (
     <section className={styles.popIn}>
       <button type="button" onClick={closePopIn}>
