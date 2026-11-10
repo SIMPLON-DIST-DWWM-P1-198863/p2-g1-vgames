@@ -1,0 +1,63 @@
+.popIn {
+  width: 30rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--dark-background-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--lightgrey-background-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.popIn button {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+
+  background-color: transparent;
+  color: var(--font-color-for-dark-background);
+}
+
+.thumbsize {
+  width: 20rem;
+  height: 20rem;
+  border: 0.1rem solid var(--dark-background-color);
+  border-radius: 10%;
+  margin: 1rem;
+}
+
+.gameTitle {
+  color: var(--font-color-for-dark-background);
+  font-size: var(--font-size-title-h3);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.paragraph {
+  color: var(--font-color-for-dark-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.game_description {
+  font-style: italic;
+}
+
+.paragraph span {
+  padding: 0.2rem;
+}
