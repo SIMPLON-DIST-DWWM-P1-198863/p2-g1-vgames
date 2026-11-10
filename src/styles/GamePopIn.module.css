@@ -1,5 +1,5 @@
 .popIn {
-  width: 30rem;
+  width: 80vw;
 
   position: fixed;
   top: 50%;
@@ -33,8 +33,8 @@
 }
 
 .thumbsize {
-  width: 20rem;
-  height: 20rem;
+  width: 20vw;
+  height: 20vw;
   border: 0.1rem solid var(--dark-background-color);
   border-radius: 10%;
   margin: 1rem;
@@ -51,11 +51,12 @@
   color: var(--font-color-for-dark-background);
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: center;
 }
 
 .game_description {
   font-style: italic;
+  text-align: center;
 }
 
 .paragraph span {

@@ -1,32 +1,23 @@
-# Header US-01 :
+# US-05 — GamePopIn
 
-Composant "Header" du site de jeux vidéo The Honk Zone, réalisé pour l'US01 en React et TypeScript.
-Il affiche le logo, le titre, l'avatar avec le lien de connexion, et le menu de navigation.
+Le composant `GamePopIn` du site de jeux vidéo The Honk Zone a été développé dans le cadre de l'US-05, avec React et TypeScript.
 
-# Contenu de la branche :
+Il permet d'afficher une fenêtre pop-in contenant les informations détaillées du jeu sélectionné lorsque l'utilisateur clique sur sa jaquette.
 
-1. "header.tsx" : le composant "Header", avec le logo et le titre cliquables, l'avatar avec Connexion en dessous, et le menu de navigation (accueil, catalogue de jeux, sorties à venir).
-2. "header.css" : le style en mobile first, mais également adapté pour la version desktop.
-3. Version mobile : un menu burger qui s'ouvre et se ferme avec une case à cocher cachée et du CSS
-4. Version desktop : le burger disparaît et les liens s'affichent en ligne
+Ce composant a été intégré à la section promotionnelle de la page d'accueil.
 
-# Technologies utilisées :
+## Contenu de la branche
+
+1. `GamePopIn.tsx` : création du composant `GamePopIn`, comprenant :
+   - Un bouton permettant de fermer la fenêtre pop-in.
+   - La jaquette et le titre du jeu sélectionné.
+   - Les informations détaillées du jeu : genre, description, plateformes disponibles, date de sortie, développeur, classification et prix initial.
+
+2. `GamePopIn.module.css` : mise en forme du composant avec une interface responsive, adaptée aux écrans d'ordinateur et aux appareils mobiles.
+
+## Technologies utilisées
 
 - React
 - TypeScript
 - Vite
-- CSS
-
-Auteur : Théo Sabban
-
-# Quick Explanation (Work in Progress):
-
-Initially, this section was intended to cover a single user story (US). However, after discussing it with our teacher, we realized that it actually encompasses two separate user stories.
-
-We therefore decided to split the work on this branch into two main parts, each corresponding to a separate pull request (PR):
-
-1. API Integration: Fetching and managing video game data from the API.
-
-2. Promotional Section: Displaying game thumbnails (GameThumb) and implementing a game pop-in (GamePopIn) to display additional game information (work in progress).
-
-The Promotional Section is being developed with responsive design in mind, along with consistent and visually appealing CSS styling (work in progress).
+- CSS (CSS Modules)
