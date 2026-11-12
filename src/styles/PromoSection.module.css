@@ -1,0 +1,51 @@
+.promo_bloc {
+  background-color: var(--dark-background-color);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.promo_bloc h2 {
+  color: var(--font-color-for-light-background);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-title-h2);
+  font-size: var(--font-size-title-h2);
+  text-transform: uppercase;
+  padding: 3rem;
+  border-radius: 2rem;
+  background-color: var(--orange-background-color);
+  text-align: center;
+}
+
+.discountTitle {
+  font-family: var(--font-main); /* Jost */
+}
+
+.games_bloc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.price_bloc {
+  font-size: var(--font-size-normal);
+  color: var(--font-color-for-dark-background);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  color: var(--orange-background-color);
+  text-shadow: 0rem 0rem 1rem var(--orange-background-color);
+  /* no mvt left/right, no mvt up/down, blur radius, color */
+}
