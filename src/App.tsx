@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import PromoSection from "./components/PromoSection.tsx";
-import Footer from "./components/Footer.tsx";
-import Formulaire from "./components/Formulaire.tsx";
+import { Route, Routes } from "react-router";
+import Homepage from "./components/Homepage.tsx";
+import GamesCatalogue from "./components/GamesCatalogue.tsx";
+import GamesRelease from "./components/GamesRelease.tsx";
+import MyAccount from "./components/MyAccount.tsx";
 import Header from "./components/Header.tsx";
+import Footer from "./components/Footer.tsx";
 
 export type Game = {
   id: number;
@@ -35,12 +38,16 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
-      <PromoSection containerGames={games} nb_max={8} />
-      <Formulaire />
+      <Routes>
+        <Route path="/" element={<Homepage all_games={games} />} />
+        <Route path="/catalogue_de_jeux" element={<GamesCatalogue />} />
+        <Route path="/jeux-a-venir" element={<GamesRelease />} />
+        <Route path="/mon-compte" element={<MyAccount />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
