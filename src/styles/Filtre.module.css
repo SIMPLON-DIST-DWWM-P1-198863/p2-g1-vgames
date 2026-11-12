@@ -1,0 +1,57 @@
+.catalogue {
+  display: grid;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.filtres {
+  background-color: var(--font-color-for-dark-background);
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+  gap: 2rem;
+  border: 0.1rem solid var(--dark-background-color);
+  border-radius: 1rem;
+}
+.filtres h3 {
+  display: flex;
+  justify-content: center;
+}
+.filtres p {
+  padding-bottom: 1rem;
+}
+.plateforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.range {
+  display: grid;
+  padding-bottom: 2rem;
+}
+
+.range p {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.range input {
+  width: 70%;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filtres {
+    width: 45%;
+    margin-left: 25%;
+  }
+  .range input,
+  .range p {
+    margin-left: 15%;
+  }
+}
