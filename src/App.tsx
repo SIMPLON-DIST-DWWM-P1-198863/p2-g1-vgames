@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import PromoSection from "./components/PromoSection.tsx";
-import Footer from "./components/Footer.tsx";
-import Formulaire from "./components/Formulaire.tsx";
-import Header from "./components/Header.tsx";
+import Homepage from "./components/Homepage.tsx";
 
 export type Game = {
   id: number;
@@ -36,10 +33,7 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <PromoSection containerGames={games} nb_max={8} />
-      <Formulaire />
-      <Footer />
+      <Homepage all_games={games} />
     </div>
   );
 }
