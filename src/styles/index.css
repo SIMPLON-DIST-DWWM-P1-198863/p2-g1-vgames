@@ -13,14 +13,18 @@
 
   /* Fontweights */
   --font-weight-normal: 400;
+  --font-weight-normal-bold: 600;
   --font-weight-title-h1: 900;
   --font-weight-title-h2: 800;
+  --font-weight-title-h3: 700;
 
   /* Fontsizes */
   --font-size-normal: 1rem;
   --font-size-normal-bold: 1.1rem;
-  --font-size-title-h1: 3rem;
+  --font-size-normal-bigger: 1.4rem;
+  --font-size-title-h1: 3.5rem;
   --font-size-title-h2: 2rem;
+  --font-size-title-h3: 1.7rem;
 
   /* Colors */
   --font-color-for-dark-background: #ffffff;
