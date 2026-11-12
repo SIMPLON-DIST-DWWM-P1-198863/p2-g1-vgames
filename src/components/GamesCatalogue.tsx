@@ -1,11 +1,10 @@
-import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
-
 function GamesCatalogue() {
   return (
     <>
-      <Header />
-      <Footer />
+      <p>
+        Coming soon : Catalogue de jeux + Filtre selon les critères de sélection
+        + Bouton de prix croissant/décroissant + Section jeux favoris des dév
+      </p>
     </>
   );
 }

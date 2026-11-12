@@ -1,11 +1,7 @@
-import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
-
 function MyAccount() {
   return (
     <>
-      <Header />
-      <Footer />
+      <p>Coming soon : Compte personnel + badge + liste de jeux favoris</p>
     </>
   );
 }

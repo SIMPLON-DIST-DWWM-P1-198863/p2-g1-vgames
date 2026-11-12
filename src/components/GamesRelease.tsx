@@ -1,11 +1,7 @@
-import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
-
 function GamesRelease() {
   return (
     <>
-      <Header />
-      <Footer />
+      <p>Coming soon : Calendrier de jeux à venir</p>
     </>
   );
 }
