@@ -4,11 +4,14 @@ import logox from "../assets/logo-x.png";
 import logoyoutube from "../assets/logo-youtube.png";
 import Oie from "../assets/Oie.png";
 import styles from "../styles/Footer.module.css";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
     <section className={styles.bas}>
-      <img src={Oie} alt="Oie" className={styles["logo-oie"]} />
+      <Link to="/">
+        <img src={Oie} alt="Oie" className={styles["logo-oie"]} />
+      </Link>
       <h1 className={styles.mentions}>Mentions légales</h1>
       <div className={styles.suivre}>
         <h2 className={styles["suivre-titre"]}>Nous suivre :</h2>
