@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router";
 import Homepage from "./components/Homepage.tsx";
+import GamesCatalogue from "./components/GamesCatalogue.tsx";
+import GamesRelease from "./components/GamesRelease.tsx";
+import MyAccount from "./components/MyAccount.tsx";
 
 export type Game = {
   id: number;
@@ -32,9 +36,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Homepage all_games={games} />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Homepage all_games={games} />} />
+        <Route path="/catalogue_de_jeux" element={<GamesCatalogue />} />
+        <Route path="/jeux-a-venir" element={<GamesRelease />} />
+        <Route path="/mon-compte" element={<MyAccount />} />
+      </Routes>
+    </>
   );
 }
 
