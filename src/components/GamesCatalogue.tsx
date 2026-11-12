@@ -1,9 +1,9 @@
-import ButtonPrice from "./ButtonPrice.tsx"
+import Filtre from "./Filtre.tsx";
 
 function GamesCatalogue() {
   return (
     <>
-      <ButtonPrice games = {[]} />
+      <Filtre />
     </>
   );
 }
