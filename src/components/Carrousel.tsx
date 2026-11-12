@@ -13,7 +13,10 @@ function Carrousel({ containerGames, nb_max }: CarrouselProps) {
   const new_containerGames = containerGames.slice(0, nb_max); //select from index 0 to index nb_max
 
   return (
-    <div>
+    <section className={styles.tendance_section}>
+      <h2 className={styles.h2Title}>
+        Classement des jeux tendances du moment
+      </h2>
       <Swiper
         className={styles.swiper}
         // install Swiper modules
@@ -24,8 +27,6 @@ function Carrousel({ containerGames, nb_max }: CarrouselProps) {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {new_containerGames.map((game) => (
           <div>
@@ -38,11 +39,17 @@ function Carrousel({ containerGames, nb_max }: CarrouselProps) {
                   evt.currentTarget.src = "/missingImg.png"; //if img not avalaible, use this instead
                 }}
               />
+
+              <div>
+                <p>{game.title}</p>
+                <p>{game.genre}</p>
+                <p>{game.price}€</p>
+              </div>
             </SwiperSlide>
           </div>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }
 
