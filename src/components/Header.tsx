@@ -1,6 +1,7 @@
 import logo from "../assets/Oie.png";
 import avatar from "../assets/avatar.png";
 import styles from "../styles/Header.module.css";
+import { Link } from "react-router";
 
 function Header() {
   return (
@@ -10,16 +11,16 @@ function Header() {
       </a>
 
       <h1>
-        <a href="/">The Honk Zone</a>
+        <Link to="/">The Honk Zone</Link>
       </h1>
 
       <div>
-        <a href="/">
+        <Link to="/mon-compte">
           <img src={avatar} alt="Avatar placeholder" />
-        </a>
-        <a className={styles["header-connexion"]} href="#">
+        </Link>
+        <Link to="/mon-compte" className={styles["header-connexion"]}>
           Connexion
-        </a>
+        </Link>
       </div>
 
       <label className={styles["header-burger"]}>
@@ -30,15 +31,15 @@ function Header() {
       </label>
 
       <nav className={styles["header-menu"]}>
-        <a className={styles["header-btn"]} href="#">
+        <Link to="/" className={styles["header-btn"]}>
           Page d'accueil
-        </a>
-        <a className={styles["header-btn"]} href="#">
+        </Link>
+        <Link to="/catalogue_de_jeux" className={styles["header-btn"]}>
           Catalogue de jeux
-        </a>
-        <a className={styles["header-btn"]} href="#">
+        </Link>
+        <Link to="/jeux-a-venir" className={styles["header-btn"]}>
           Sorties des jeux à venir
-        </a>
+        </Link>
       </nav>
     </header>
   );

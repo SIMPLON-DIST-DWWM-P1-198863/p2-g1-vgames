@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import PromoSection from "./components/PromoSection.tsx";
-import Footer from "./components/Footer.tsx";
-import Formulaire from "./components/Formulaire.tsx";
+import { Route, Routes } from "react-router";
+import Homepage from "./components/Homepage.tsx";
+import GamesCatalogue from "./components/GamesCatalogue.tsx";
+import GamesRelease from "./components/GamesRelease.tsx";
+import MyAccount from "./components/MyAccount.tsx";
 import Header from "./components/Header.tsx";
+import Footer from "./components/Footer.tsx";
 
 export type Game = {
   id: number;
@@ -22,7 +25,6 @@ export type Game = {
 function App() {
   //API section:
   const [games, setGames] = useState<Game[]>([]); //equivalent to myGames, updateMyGames
-  const nb_max = 8; //limit the number of displayed games
 
   useEffect(() => {
     const getGame = async () => {
@@ -30,19 +32,22 @@ function App() {
         "https://materiel-apprentissage.github.io/api/video-games.json",
       );
       const data = await response.json();
-      const short_data = data.slice(0, nb_max); //select from index 0 to index nb_max
-      setGames(short_data); //update all nb_max games to games
+      setGames(data); //update all nb_max games to games
     };
     getGame();
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
-      <PromoSection containerGames={games} nb_max={8} />
-      <Formulaire />
+      <Routes>
+        <Route path="/" element={<Homepage all_games={games} />} />
+        <Route path="/catalogue_de_jeux" element={<GamesCatalogue />} />
+        <Route path="/jeux-a-venir" element={<GamesRelease />} />
+        <Route path="/mon-compte" element={<MyAccount />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

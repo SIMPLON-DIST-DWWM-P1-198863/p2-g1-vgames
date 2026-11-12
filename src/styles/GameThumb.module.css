@@ -25,6 +25,7 @@
   box-shadow: 0 0 1rem 0.1rem var(--dark-background-color);
   /* no mvt left/right, no mvt up/down, blur radius, spread radius, color */
   transform: translateY(-0.1rem);
+  transition: ease 0.4s;
 }
 
 .displayGameTitle {
