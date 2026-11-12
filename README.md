@@ -1,19 +1,28 @@
-# US-05 — GamePopIn
+# US-08 - Router-Linkto
 
-Le composant `GamePopIn` du site de jeux vidéo The Honk Zone a été développé dans le cadre de l'US-05, avec React et TypeScript.
+Cette User Story (US) concerne la mise en place du système de navigation entre les différentes pages du site de jeux vidéo The Honk Zone, à l'aide de React Router.
 
-Il permet d'afficher une fenêtre pop-in contenant les informations détaillées du jeu sélectionné lorsque l'utilisateur clique sur sa jaquette.
+L'objectif est de permettre aux utilisateurs de naviguer entre les différentes pages du site sans rechargement complet de l'application.
 
-Ce composant a été intégré à la section promotionnelle de la page d'accueil.
+Il est nécessaire d'installer le package "react-router".
 
-## Contenu de la branche
+## Démarches effectuées
 
-1. `GamePopIn.tsx` : création du composant `GamePopIn`, comprenant :
-   - Un bouton permettant de fermer la fenêtre pop-in.
-   - La jaquette et le titre du jeu sélectionné.
-   - Les informations détaillées du jeu : genre, description, plateformes disponibles, date de sortie, développeur, classification et prix initial.
+1. App.tsx + main.tsx :
 
-2. `GamePopIn.module.css` : mise en forme du composant avec une interface responsive, adaptée aux écrans d'ordinateur et aux appareils mobiles.
+- Intégration des composants Routes et Route de React Router.
+- Configuration des routes permettant d'associer chaque URL à un composant React.
+- Définition de la route principale (/) correspondant à la page d'accueil.
+
+2. Navigation (Link) :
+
+- Intégration des composants Link pour assurer la navigation entre les différentes pages.
+- Navigation entre les pages sans rechargement complet du site.
+
+3. Création des pages :
+
+- Création des composants correspondant aux différentes pages du site.
+- Mise en place de la structure nécessaire à leur développement futur.
 
 ## Technologies utilisées
 
