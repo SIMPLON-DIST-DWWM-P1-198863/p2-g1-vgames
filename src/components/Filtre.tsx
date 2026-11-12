@@ -1,6 +1,7 @@
 import styles from "../styles/Filtre.module.css";
 import { useEffect, useState } from "react";
 import type { Game } from "../App.tsx";
+import ButtonPrice from "./ButtonPrice.tsx";
 
 export default function Filtre() {
   //API section:
@@ -50,6 +51,7 @@ export default function Filtre() {
               <input
                 type="radio"
                 name="platform"
+                defaultChecked
                 onChange={() => setSelectPlatform("PC")}
               />
               {"PC"}
@@ -109,15 +111,13 @@ export default function Filtre() {
       </section>
 
       <section>
-        {games
-          .filter((game) => {
+        <ButtonPrice
+          games={games.filter((game) => {
             return (
               game.platforms.includes(selectPlatform) && game.price < prixMax
             );
-          })
-          .map((game) => {
-            return <p>{game.title}</p>;
           })}
+        />
       </section>
     </>
   );
