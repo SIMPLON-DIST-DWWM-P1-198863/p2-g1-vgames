@@ -1,0 +1,56 @@
+.slide {
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+.slide > div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--orange-background-color);
+  background: linear-gradient(
+    transparent,
+    var(--dark-background-color),
+    var(--dark-background-color),
+    var(--dark-background-color),
+    var(--dark-background-color)
+  );
+  font-size: var(--font-size-title-h2);
+  font-weight: var(--font-weight-title-h2);
+}
+
+.slide > img {
+  object-fit: contain;
+}
+.swiper {
+  width: 100%;
+  /* height: 80vw; */
+  border-radius: 2rem;
+}
+
+.h2Title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-title-h2);
+  margin: 1rem;
+  background-color: var(--orange-background-color);
+  padding: 3rem;
+  border-radius: 2rem;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-title-h2);
+}
+
+.tendance_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem;
+  padding: 2rem;
+  gap: 2rem;
+}
