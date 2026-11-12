@@ -3,7 +3,6 @@ import PromoSection from "./components/PromoSection.tsx";
 import Footer from "./components/Footer.tsx";
 import Formulaire from "./components/Formulaire.tsx";
 import Header from "./components/Header.tsx";
-import ButtonPrice from "./components/ButtonPrice.tsx";
 
 export type Game = {
   id: number;
@@ -41,7 +40,6 @@ function App() {
     <div>
       <Header />
       <PromoSection containerGames={games} nb_max={8} />
-      <ButtonPrice />
       <Formulaire />
       <Footer />
     </div>

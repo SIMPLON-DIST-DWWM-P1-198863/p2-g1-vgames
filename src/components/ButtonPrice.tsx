@@ -13,23 +13,11 @@ function getPrice(game: Game) {
   }
   return game.price.toFixed(2) + " €";
 }
-
-function ButtonPrice() {
-  const [games, setGames] = useState<Game[]>([]);
+type ButtonPriceProps = {games:Game []}
+function ButtonPrice({games}: ButtonPriceProps) {
   const [sortGames, setSortGames] = useState<Game[]>([]);
   const [sortPrice, setSortPrice] = useState(true);
   const [ascending, setAscending] = useState(true);
-
- useEffect(() => {
-    const getGames = async () => {
-      const response = await fetch(
-        "https://materiel-apprentissage.github.io/api/video-games.json",
-      );
-      const data = await response.json();
-      setGames(data);
-    };
-    getGames();
-  }, []);
 
   useEffect(() => {
     const list = [...games];
