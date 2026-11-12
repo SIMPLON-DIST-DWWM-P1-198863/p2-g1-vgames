@@ -1,0 +1,60 @@
+.container {
+  margin: 0.75rem;
+  padding: 1rem;
+  background-color: var(--dark-background-color);
+  border-radius: 1rem;
+}
+
+.tri {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tri button {
+  padding: 0.4rem 0.9rem;
+  font-family: inherit;
+  font-size: var(--font-size-normal);
+  color: var(--font-color-for-dark-background);
+  background: none;
+  border: 0.15rem solid var(--orange-background-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.tri button:hover {
+  background-color: var(--orange-background-color);
+  color: var(--font-color-for-light-background);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price {
+  padding-top: 0.5rem;
+  font-size: var(--font-size-normal);
+  color: var(--orange-background-color);
+}
+
+.note {
+  font-size: var(--font-size-normal);
+  color: var(--lightgrey-background-color);
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 2rem;
+    padding: 2rem;
+  }
+}

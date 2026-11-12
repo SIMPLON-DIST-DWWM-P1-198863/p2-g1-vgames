@@ -1,32 +1,32 @@
-# US-08 - Router-Linkto
+# Header US-01 :
 
-Cette User Story (US) concerne la mise en place du système de navigation entre les différentes pages du site de jeux vidéo The Honk Zone, à l'aide de React Router.
+Composant "Header" du site de jeux vidéo The Honk Zone, réalisé pour l'US01 en React et TypeScript.
+Il affiche le logo, le titre, l'avatar avec le lien de connexion, et le menu de navigation.
 
-L'objectif est de permettre aux utilisateurs de naviguer entre les différentes pages du site sans rechargement complet de l'application.
+# Contenu de la branche :
 
-Il est nécessaire d'installer le package "react-router".
+1. "header.tsx" : le composant "Header", avec le logo et le titre cliquables, l'avatar avec Connexion en dessous, et le menu de navigation (accueil, catalogue de jeux, sorties à venir).
+2. "header.css" : le style en mobile first, mais également adapté pour la version desktop.
+3. Version mobile : un menu burger qui s'ouvre et se ferme avec une case à cocher cachée et du CSS
+4. Version desktop : le burger disparaît et les liens s'affichent en ligne
 
-## Démarches effectuées
-
-1. App.tsx + main.tsx :
-
-- Intégration des composants Routes et Route de React Router.
-- Configuration des routes permettant d'associer chaque URL à un composant React.
-- Définition de la route principale (/) correspondant à la page d'accueil.
-
-2. Navigation (Link) :
-
-- Intégration des composants Link pour assurer la navigation entre les différentes pages.
-- Navigation entre les pages sans rechargement complet du site.
-
-3. Création des pages :
-
-- Création des composants correspondant aux différentes pages du site.
-- Mise en place de la structure nécessaire à leur développement futur.
-
-## Technologies utilisées
+# Technologies utilisées :
 
 - React
 - TypeScript
 - Vite
-- CSS (CSS Modules)
+- CSS
+
+Auteur : Théo Sabban
+
+# Quick Explanation (Work in Progress):
+
+Initially, this section was intended to cover a single user story (US). However, after discussing it with our teacher, we realized that it actually encompasses two separate user stories.
+
+We therefore decided to split the work on this branch into two main parts, each corresponding to a separate pull request (PR):
+
+1. API Integration: Fetching and managing video game data from the API.
+
+2. Promotional Section: Displaying game thumbnails (GameThumb) and implementing a game pop-in (GamePopIn) to display additional game information (work in progress).
+
+The Promotional Section is being developed with responsive design in mind, along with consistent and visually appealing CSS styling (work in progress).
