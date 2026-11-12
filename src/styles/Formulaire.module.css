@@ -29,7 +29,6 @@
 .formulaire button {
   background-color: #fca616;
   color: black;
-  border: none;
   border-radius: 0.5rem;
   justify-self: center;
   text-align: center;
@@ -43,20 +42,20 @@
 }
 
 @media screen and (min-width: 768px) {
-.formulaire button {
-width: 15rem;
-font-size: large;
-font-weight: 500;
-}
-.contact label{
-text-align: center;
-padding: 0.5rem;
-}
-.mess label{
-text-align: center;
-padding: 0.5rem;
-}
-.mess input {
-  height: 7rem;
-}
+  .formulaire button {
+    width: 15rem;
+    font-size: large;
+    font-weight: 500;
+  }
+  .contact label {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .mess label {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .mess input {
+    height: 7rem;
+  }
 }
