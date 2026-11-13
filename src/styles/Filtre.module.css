@@ -1,12 +1,17 @@
 .catalogue {
   display: grid;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: var(--font-size-title-h2);
+  font-weight: var(--font-weight-title-h2);
+  font-family: var(--font-secondary);
+  padding-top: 2.5rem;
 }
-
+.h3Title {
+  font-size: var(--font-size-title-h3);
+  font-weight: var(--font-weight-title-h3);
+}
 .filtres {
-  background-color: var(--font-color-for-dark-background);
+  background-color: var(--lightgrey-background-color);
   width: 80%;
   margin-left: 10%;
   margin-top: 2rem;
@@ -21,6 +26,8 @@
 .filtres h3 {
   display: flex;
   justify-content: center;
+  font-size: var(--font-size-title-h3);
+  padding-bottom: 2rem;
 }
 .filtres p {
   padding-bottom: 1rem;
@@ -34,7 +41,6 @@
   display: grid;
   padding-bottom: 2rem;
 }
-
 .range p {
   width: 70%;
   display: flex;
@@ -44,7 +50,6 @@
   width: 70%;
   padding-top: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .filtres {
     width: 45%;
