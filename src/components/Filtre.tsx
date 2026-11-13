@@ -7,16 +7,9 @@ export default function Filtre() {
   //API section:
   const [games, setGames] = useState<Game[]>([]); //equivalent to myGames, updateMyGames
   //limit the number of displayed games
-  const plateforms = [
-    "PlayStation 4",
-    "Nintendo Switch",
-    "PC",
-    "Wii U",
-    "Xbox One",
-    "Multiplatform",
-  ];
   const [selectPlatform, setSelectPlatform] = useState("PC");
   const [prixMax, setPrixMax] = useState(50);
+  
   //prixmax entre 0 et 100 avec sa valeur de depart a 50
   useEffect(() => {
     const getGame = async () => {
