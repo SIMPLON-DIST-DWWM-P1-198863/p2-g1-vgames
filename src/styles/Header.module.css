@@ -123,6 +123,10 @@ header:has(input:checked) .header-menu {
     text-align: center;
   }
 
+  header h1 a {
+    font-size: var(--font-size-title-h1);
+  }
+
   header div > a > img {
     width: 6.5rem;
     height: 6.5rem;
