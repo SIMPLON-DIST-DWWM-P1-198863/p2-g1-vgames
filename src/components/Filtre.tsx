@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import type { Game } from "../App.tsx";
 import ButtonPrice from "./ButtonPrice.tsx";
 
-
 export default function Filtre() {
   //API section:
   const [games, setGames] = useState<Game[]>([]); //equivalent to myGames, updateMyGames
@@ -23,7 +22,6 @@ export default function Filtre() {
     };
     getGame();
   }, []);
-
 
   return (
     <>
