@@ -43,7 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage all_games={games} />} />
         <Route path="/catalogue_de_jeux" element={<GamesCatalogue />} />
-        <Route path="/jeux-a-venir" element={<GamesRelease />} />
+        <Route path="/jeux-a-venir" element={<GamesRelease games={games} />} />
         <Route path="/mon-compte" element={<MyAccount />} />
       </Routes>
       <Footer />

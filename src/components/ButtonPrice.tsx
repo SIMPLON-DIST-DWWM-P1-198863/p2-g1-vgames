@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/ButtonPrice.module.css";
 import GameThumb from "./GameThumb.tsx";
 import type { Game } from "../App.tsx";
+import GamePopIn from "./GamePopIn.tsx";
 
 function getNote(game: Game) {
   return (50 + ((game.id * 7) % 50)) / 10;
@@ -18,6 +19,7 @@ function ButtonPrice({games}: ButtonPriceProps) {
   const [sortGames, setSortGames] = useState<Game[]>([]);
   const [sortPrice, setSortPrice] = useState(true);
   const [ascending, setAscending] = useState(true);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null); //allows to select the game for the popin
 
   useEffect(() => {
     const list = [...games];
@@ -53,15 +55,28 @@ function ButtonPrice({games}: ButtonPriceProps) {
 
       <ul className={styles.list}>
         {sortGames.map((game) => (
+          
+          
           <li key={game.id} className={styles.game}>
-            <GameThumb sampleGame={game} />
+            <div
+              onClick={() => {
+                setSelectedGame(game);
+              }}
+            >
+              <GameThumb sampleGame={game} />
+              </div>
             <p className={styles.price}>{getPrice(game)}</p>
             <p className={styles.note}>{getNote(game).toFixed(1)} / 10</p>
           </li>
+          
         ))}
       </ul>
-
-    </section>
+      <GamePopIn
+          sampleGame={selectedGame}
+          closePopIn={() => setSelectedGame(null)} //means when we close the popin, there is no game
+          isOpen={selectedGame !== null} //means we open the popin if there is a selected game
+        />
+     </section>
   );
 }
 
