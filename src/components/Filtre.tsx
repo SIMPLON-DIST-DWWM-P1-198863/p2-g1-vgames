@@ -25,11 +25,11 @@ export default function Filtre() {
 
   return (
     <>
-      <h2 className={styles.catalogue}>Catalogue de jeux:</h2>
+      <h2 className={styles.catalogue}>Catalogue de jeux</h2>
       <section className={styles.filtres}>
         <div>
-          <h3>Filtre de sélection</h3>
-          <p>Plateformes:</p>
+          <h3 className={styles.h3Title}>Filtre de sélection</h3>
+          <p>Plateformes :</p>
           <div className={styles.plateforms}>
             <label>
               <input
@@ -88,7 +88,7 @@ export default function Filtre() {
           </div>
         </div>
         <div className={styles.range}>
-          <label htmlFor="prix">Prix:</label>
+          <label htmlFor="prix">Prix :</label>
           <input
             type="range"
             id="prix"
