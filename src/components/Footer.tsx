@@ -12,9 +12,9 @@ export default function Footer() {
       <Link to="/">
         <img src={Oie} alt="Oie" className={styles["logo-oie"]} />
       </Link>
-      <h1 className={styles.mentions}>Mentions légales</h1>
+      <p className={styles.mentions}>Mentions légales</p>
       <div className={styles.suivre}>
-        <h2 className={styles["suivre-titre"]}>Nous suivre :</h2>
+        <p className={styles["suivre-titre"]}>Nous suivre :</p>
         <div className={styles["suivre-logos"]}>
           <a href="https://www.instagram.com/">
             <img src={logoinstagram} alt="logo-instagram" />
